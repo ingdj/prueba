@@ -1,0 +1,768 @@
+<!DOCTYPE html>
+<html lang="en" id="main">
+
+    <head>
+    <meta charset="utf-8">
+    <link href="https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap" rel="stylesheet" type="text/css">
+        
+        <title>Tribute page Juan Felix Sanchez</title>
+   
+    <style>
+        
+        html {
+            background-color:moccasin;
+        }
+        
+        header {
+            color:moccasin;
+            font-family: Indie Flower, comic sans MS;
+            font-weight: bold;
+            font-style: normal;
+            text-align: center;
+            background-image: url(https://www.canteraslerma.com/wp-content/uploads/2016/09/piedra-de-rio-gris-tamano-cero.jpg);
+            /* agregados despues ojo con esto*/
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            /*---*/
+            font-size: 30px;
+            box-shadow: 10px 10px 5px rgba(0,0,0,0.19);
+            display:grid;
+           
+                        
+        }
+        
+        nav {
+            font-size: 20px;
+            font-weight: 800;
+            width:100%;
+            margin: auto;
+            background-color: antiquewhite;
+            border-radius: 0%;
+           
+            
+        }
+        
+         nav ul {
+            list-style-type: none;
+            margin: 0px;
+            padding: 0px 0px 0px 50px;
+            
+        }
+        
+        nav li {
+            display:inline;
+            margin-right: 40px;
+            
+        }
+        
+        nav a{
+            text-decoration: none;
+            color:black;
+        }
+        
+        nav li :hover {
+            background-color: lightsteelblue;
+            
+        }
+        
+        #img-div {
+            display:flex;
+            flex-flow:column;
+            justify-content: center;
+            width:100%;
+            height:400px;
+            margin-top: 40px;
+        }
+        
+        #image {
+            max-width: 100%;
+            height: auto;
+            margin: auto;
+            border:2px solid lightsteelblue;
+            border-radius: 10%;
+            box-shadow: 10px 10px 5px  rgba(0,0,0,0.2);
+                   
+        }
+        
+        #img-caption {
+                text-align: center;
+                color:black;
+                font-family: Comic Sans MS, arial,sans-serif;
+                font-weight: 500;
+                font-size: 20px;
+               
+        }   
+            
+        #body {
+            display:grid;
+            background-color:moccasin;
+            grid-template-columns: auto;
+            grid-template-rows:auto auto auto;
+            grid-gap: 30px;
+             
+        }
+        
+        #tribute-info{
+            font-family: Comic Sans MS, sans-serif;
+            font-weight: 400;
+            font-size: 15px;
+            background-color:antiquewhite;
+            border-radius: 5%;
+            box-shadow: 3px 3px 10px 10px  rgba(0,0,0,0.1);
+            
+            
+        }
+        
+        article {
+            text-align:center;
+                                    
+        }
+        
+        p {
+            text-align:center;
+            font-weight: 500;
+        }
+        
+        #second-section {
+            background-color:antiquewhite;
+            border-radius: 5%;
+            box-shadow: 2px 2px 10px 10px  rgba(0,0,0,0.05);
+            justify-content: center;
+            font-family: Comic Sans MS,sans-serif;
+           
+            
+        }
+        
+        section {
+            font-family: Comic Sans MS,sans-serif;
+            font-weight: 400;
+            font-size: 15px;
+            text-align:center;
+        }
+        
+         #works-img1 {
+            width: 300px;
+            height: 300px;
+            border:2px solid lightsteelblue;
+            border-radius: 10%;
+            box-shadow: 10px 10px 5px  rgba(0,0,0,0.2);
+            margin: auto
+        }
+        
+         #works-img2 {
+            width: 300px;
+            height: 300px;
+            border:2px solid lightsteelblue;
+            border-radius: 10%;
+            box-shadow: 10px 10px 5px  rgba(0,0,0,0.2);
+            margin: auto
+        }
+        
+         #works-img3 {
+            width: 300px;
+            height: 300px;
+            border:2px solid lightsteelblue;
+            border-radius: 10%;
+            box-shadow: 10px 10px 5px  rgba(0,0,0,0.2);
+            margin: auto
+        }
+        
+         #works-img4 {
+            width: 300px;
+            height: 300px;
+            border:2px solid lightsteelblue;
+            border-radius: 10%;
+            box-shadow: 10px 10px 5px  rgba(0,0,0,0.2);
+            margin: auto
+        }
+        
+        #photo-upload{
+            margin-top: 20px;
+            font-family: comic sans MS,sans-serif;
+            font-size: 12px;
+            text-align: center;
+        }
+            
+        
+        #church-anim {
+            width:200px;
+            height:200px;
+            background: linear-gradient(#000099,#66c2ff,#55bb55,#44aa33); 
+            margin: 20px auto;
+            display:grid;
+            grid-template-columns: 1fr 0.4fr 1fr 1fr;
+            grid-template-rows: repeat(6, 1fr);
+            grid-template-areas:
+                
+                ". cruz1     .         ."
+                ". iglesia9  cruz2     ."
+                ". iglesia7  iglesia8  ."
+                ". iglesia5  iglesia6  ."
+                ". iglesia3  iglesia4  ."
+                ". iglesia1  iglesia2  .";
+            
+        }
+        
+        #first-church {
+            background: linear-gradient(0deg,whitesmoke,dimgray);
+            border:0.1px solid black;
+            grid-area: iglesia2;
+            display:grid; 
+            grid-template-columns: repeat(3,1fr);
+            grid-template-areas: 
+                "piedra puerta piedra1";
+            animation-name: construction1;
+            animation-iteration-count: infinite;
+            animation-duration: 60s;
+            
+           
+        }
+        
+        #piedra {
+            border: 0.1px solid black;
+            background-color: inherit;
+            grid-area: piedra;
+            animation-name: construction1;
+            animation-iteration-count: infinite;
+            animation-duration: 60s;
+            
+        }
+       
+        #piedra1 {
+            border: 0.1px solid black;
+            background-color: inherit;
+            grid-area: piedra1;
+            animation-name: construction1;
+            animation-iteration-count: infinite;
+            animation-duration: 60s;
+            
+        }
+        
+        #puerta {
+             background-color: black;
+             grid-area: puerta;
+            animation-name: construction1;
+            animation-iteration-count: infinite;
+            animation-duration:60s;
+            
+        }
+        
+        @keyframes construction1 {
+        
+            0% {
+        opacity: 0;
+        }
+            5% {
+        opacity: 0.5;
+            }
+            10% {
+        opacity:1;
+            }
+                    
+            100% {
+        opacity: 1;
+            }
+        }
+        
+        #second-church {
+            background: linear-gradient(0deg,whitesmoke,dimgray);
+            grid-area:iglesia4;
+            border:0.1px solid black;
+            display:grid; 
+            grid-template-columns: repeat(3,1fr);
+            grid-template-areas: 
+                "piedra2 piedra3 piedra4";
+            animation-name: construction2;
+            animation-iteration-count: infinite;
+            animation-duration: 60s;
+            
+        }
+        
+        #piedra2 {
+            border: 0.1px solid black;
+            background-color: inherit;
+            grid-area: piedra2;
+            animation-name: construction;
+            animation-name: construction2;
+            animation-iteration-count: infinite;
+            animation-duration: 60s;
+        }
+       
+        #piedra3 {
+            border: 0.1px solid black;
+            background-color: inherit;
+            grid-area: piedra3;
+            animation-name: construction2;
+            animation-iteration-count: infinite;
+            animation-duration: 60s;
+        }
+            
+        #piedra4 {
+            border: 0.1px solid black;
+            background-color: inherit;
+            grid-area: piedra4;
+            animation-name: construction2;
+            animation-iteration-count: infinite;
+            animation-duration: 60s;
+            
+            }
+        
+         @keyframes construction2 {
+        
+            0% {
+        opacity: 0;
+        }
+             10%{
+        opacity: 0;         
+             }
+             
+            15% {
+        opacity:1;
+            }
+                    
+            100% {
+        opacity: 1;
+            }
+        }
+        
+        #thirdth-church {
+             background: linear-gradient(0deg,whitesmoke,dimgray);
+             border:0.1px solid black;
+             grid-area: iglesia6;
+             display:grid; 
+             grid-template-columns: repeat(3,1fr);
+            grid-template-areas: 
+                "piedra5 piedra6 piedra7";
+            animation-name: construction3;
+            animation-iteration-count: infinite;
+            animation-duration: 60s;
+                        
+        }
+        
+        #piedra5 {
+            border: 0.1px solid black;
+            background-color: inherit;
+            grid-area: piedra5;
+            animation-name: construction3;
+            animation-iteration-count: infinite;
+            animation-duration: 60s;
+        }
+       
+        #piedra6 {
+            border: 0.1px solid black;
+            background-color: inherit;
+            grid-area: piedra6;
+            animation-name: construction3;
+            animation-iteration-count: infinite;
+            animation-duration: 60s;
+        }
+            
+        #piedra7 {
+            border: 0.1px solid black;
+            background-color: inherit;
+            grid-area: piedra7;
+            animation-name: construction3;
+            animation-iteration-count: infinite;
+            animation-duration: 60s;
+            }
+        
+         @keyframes construction3 {
+        
+            0% {
+        opacity: 0;
+        }
+             10% {
+        opacity: 0;
+             }
+             
+            25% {
+        opacity:1;
+            }
+                    
+            100% {
+        opacity: 1;
+            }
+        }
+        
+        #fourth-church {
+            background: linear-gradient(0deg,whitesmoke,dimgray);
+            border:0.1px solid black;
+            grid-area: iglesia1;
+            animation-name: construction4;
+            animation-iteration-count: infinite;
+            animation-duration: 60s;
+            
+                    }
+        
+        @keyframes construction4 {
+        
+            0% {
+        opacity: 0;
+        }
+            20%{
+        opacity: 0;
+            }
+            
+           40% {
+        opacity:1;
+            }
+                    
+            100% {
+        opacity: 1;
+            }
+        }
+        
+        #fitth-church {
+             background: linear-gradient(0deg,whitesmoke,dimgray);
+             border:0.1px solid black;
+             grid-area: iglesia3;
+             animation-name: construction5;
+             animation-iteration-count: infinite;
+             animation-duration: 60s;
+        }
+        
+        @keyframes construction5 {
+        
+            0% {
+        opacity: 0;
+        }
+            30%{
+        opacity: 0;
+            }
+            50% {
+        opacity:1;
+            }
+                    
+            100% {
+        opacity: 1;
+            }
+        }
+        
+        #sixth-church {
+            background: linear-gradient(0deg,whitesmoke,dimgray);
+            border:0.1px solid black;
+            grid-area: iglesia5;
+            animation-name: construction6;
+            animation-iteration-count: infinite;
+            animation-duration: 60s;
+            
+        }
+        
+        @keyframes construction6 {
+        
+            0% {
+        opacity: 0;
+        }
+            30% {
+        opacity: 0;
+            }
+            
+            60% {
+        opacity:1;
+            }
+                    
+            100% {
+        opacity: 1;
+            }
+        }
+         #seventh-church {
+            background: linear-gradient(0deg,whitesmoke,dimgray);
+            border:0.1px solid black;
+            grid-area: iglesia7;
+            animation-name: construction7;
+            animation-iteration-count: infinite;
+            animation-duration: 60s;
+        }
+        
+        @keyframes construction7 {
+        
+            0% {
+        opacity: 0;
+        }
+            40%{
+        opacity: 0;        
+            }
+            70% {
+        opacity:1;
+            }
+                    
+            100% {
+        opacity: 1;
+            }
+        }
+        
+        #roof-church {
+            border-bottom: 30px solid black;
+            border-left: 28px solid transparent;
+            border-right: 28px solid transparent;
+            grid-area: iglesia8;
+            animation-name: construction8;
+            animation-iteration-count: infinite;
+            animation-duration: 60s;
+        }
+        
+        @keyframes construction8 {
+        
+            0% {
+        opacity: 0;
+        }
+            50%{
+        opacity: 0;        
+            }
+            80% {
+        opacity:1;
+            }
+                    
+            100% {
+        opacity: 1;
+            }
+        }
+        
+        #secondroof-church {
+            border-bottom: 25px solid black;
+            border-left: 10px solid transparent;
+            border-right: 10px solid transparent;
+            grid-area: iglesia9;
+            animation-name: construction9;
+            animation-iteration-count: infinite;
+            animation-duration: 60s;
+        }
+        
+        @keyframes construction9 {
+        
+            0% {
+        opacity: 0;
+        }
+            60% {
+        opacity:0;
+            }
+            
+            90% {
+        opacity: 1;
+            }
+                    
+            100% {
+        opacity: 1;
+            }
+        }
+            
+       #cross-one {
+            width: 20px;
+            height: 20px;
+            grid-area: cruz2;
+            position: relative;
+            left: 20px;
+            top:18px;
+            background: linear-gradient(to bottom, transparent 35%, 
+                                            black 35%, 
+                                            black 65%,  
+                                            transparent 65%),
+
+                 linear-gradient(to right, transparent 35%, 
+                                            black 35%, 
+                                            black 65%,  
+                                            transparent 65%);
+            animation-name: construction10;
+            animation-iteration-count: infinite;
+            animation-duration: 60s;
+           
+        }
+       @keyframes construction10 {
+        
+            0% {
+        opacity: 0;
+        }
+            70% {
+        opacity:0;
+            }
+           95% {
+        opacity: 1;       
+           }
+                    
+            100% {
+        opacity: 1;
+            }
+        }
+        #cross-two {
+            width: 20px;
+            height: 20px;
+            grid-area: cruz1;
+            position: relative;
+            top:22px;
+            left:2px;
+            background: linear-gradient(to bottom, transparent 35%, 
+                                            black 35%, 
+                                            black 65%,  
+                                            transparent 65%),
+
+                 linear-gradient(to right, transparent 35%, 
+                                            black 35%, 
+                                            black 65%,  
+                                            transparent 65%);
+            animation-name: construction11;
+            animation-iteration-count: infinite;
+            animation-duration: 60s;
+            
+        }
+        
+        @keyframes construction11 {
+        
+            0% {
+        opacity: 0;
+        }
+            80% {
+        opacity:0;
+            }
+            
+            100%{
+        opacity: 1;
+            }
+                    
+        }
+          
+            
+        footer {
+            background-color: black;
+            color:white;
+            font-family: arial;
+            text-align: center;
+            grid-area: 3/1/4/2;
+            padding: auto;
+        }
+        
+        
+        
+          </style>
+    </head>
+    
+<body>
+    
+    <header>
+    
+        <h1 id="title"> Juan Félix Sánchez Sánchez</h1>
+   
+        <nav> 
+        
+        <ul>
+        <li> <a href="#">Home </a></li>
+        <li> <a href="#">Collections </a></li>
+        <li> <a href="#">Reports of his life </a></li>    
+        <li> <a href="#">Condecorations</a></li>
+        </ul>
+        
+        </nav> 
+        
+    </header>
+    
+    <main>
+   
+        <div id="img-div">
+        
+            
+        <img   id="image" src="https://hernandezfoto.zenfolio.com/img/s/v-10/p2870533791-2.jpg" alt="">
+            
+        
+        
+        <h2  id="img-caption"> Juan Félix Sánchez Sánchez receiving the Premio Nacional de Artes Plásticas de Venezuela by the president of Venezuela in 1988</h2>
+           
+            
+        
+                
+        </div>
+        
+    <div id="body">
+    
+    <div id="tribute-info">
+    
+    <article>
+    
+        <h2> The life of the ascetic artist Juan Félix Sánchez.</h2>
+        
+    <p> Juan Félix was a judge without studying Law, an architect without going through university classrooms, a farmer like a good Mérida man and even a politician, a matter that he soon left to deal with his passion: art. Self-taught and empirical, he was inspired by his faith, as solid as the mountains. He was born with the century, in 1900 and would die with him, in 1997.</p>
+
+    <p>He left his studies very early and worked with his father learning the secrets of cultivating the fertile Andean lands. He also learned the art of weaving in raw wool, very typical of this cold region. His teacher would be the mother of whom he would choose as his life partner, Epifania, a silent and laborious woman who would support him to the end.</p>
+        
+    <p>Family with no sons, but with deep faith, as is common among the Andeans, made his first sculptural work in 1935, carvings made of marble, a Christ, the Virgin and Mary Magdalene. His best-known architectural works are, La Capilla del Filo del Tisure, dedicated to saint Dr. José Gregorio Hernández -andean like him, and La Capilla de piedra, located in San Rafael de Mucuchíes. He used the materials that the mountain offered, without altering them, just as he found them in nature. With stone, wood, and branches, without using any cement or glue, he made walls, supports, furniture, and carvings.</p>
+        
+    <p>He died on April 18, 1997 at the age of 96 and was buried in the Chapel of San Rafael de Mucuchíes, along with his wife Epifania. Two years after his death, the public library "Juan Félix Sánchez and Epifania Gil" was created in San Rafael de Muchuchíes. He received the National Plastic Arts Prize awarded by the National Council of Culture (CONAC) in 1988. The President of Venezuela Luis Herrera Campins (1978-83) declared the work of Juan Félix Sánchez, National Heritage.</p>
+
+    <p>One of his most famous quote was:</p>
+       
+        
+        
+       <blockquote>"I did not do this for money and fame, at all, my ideas were always to have a work here, because one where it passes must, more than anything, leave a mark, a impression ... And when i die i will go to the site of the dreams, where i will know if my dreams were true".</blockquote>
+        
+        
+        
+    <p> To know more about this amazing artist <a id="tribute-link" href="https://es.wikipedia.org/wiki/Juan_F%C3%A9lix_S%C3%A1nchez" target="_blank"> follow this link. </a></p>
+        
+        </article>  
+    </div>
+
+    <div id="second-section">
+        <section>
+            
+            <h2> Images of his works</h2>
+        
+            <div id="works-images">
+            
+        <a href="#" > <img id="works-img1" src="https://aleteiaspanish.files.wordpress.com/2020/01/web-venezuela-capilla-de-piedra-juan-felix-sanchez-shutterstock_1393364480-angelo-modesti.jpg?quality=100&strip=all&w=620&h=310&crop=1" alt="La Capilla de piedra from outside" ></a>
+        <a href="#" > <img id="works-img2" src="https://aleteiaspanish.files.wordpress.com/2020/01/web-venezuela-capilla-de-piedra-juan-felix-sanchez-1555px-interior_de_la_capilla_de_piedra.jpg?quality=100&strip=all&w=720" alt="La Capilla del Filo del Tisure, from inside"></a> 
+        <a href="#"><img id="works-img3" src="https://haimaneltroudi.com/wp-content/uploads/2019/01/haiman-el-troudi-juan-f%C3%A9lix-sanchez-creador-visionario-4-768x606.jpg" alt="carvings made of marble, a Christ, the Virgin and Mary Magdalene."></a>    
+        <a href="#"><img id="works-img4" src="https://aleteiaspanish.files.wordpress.com/2020/01/web-venezuela-capilla-de-piedra-juan-felix-sanchez-capilla_del_tisure-pintoandres91-pd.jpg?quality=100&strip=all&w=720" alt="La Capilla del Filo del Tisure, from the outside"> </a>  
+               
+               
+        
+            </div>
+        
+        <div id="photo-upload">
+        
+            
+            <leyend> Do you have photos of the work of Juan Sánchez you want to donated?</leyend>
+            <Form action="/upload-photo">
+            <input type="text" id="img-uploader" placeholder="Upload your photo here"> 
+            <button type="submit">Submit</button> 
+            </Form>
+                
+            
+        </div>    
+        
+            <div id="church-anim">
+            <div id="first-church">
+                <div id="piedra"></div>
+                <div id="piedra1"></div>
+                <div id="puerta"></div>
+                </div>
+           <div id="second-church"> 
+               <div id="piedra2"></div>
+                <div id="piedra3"></div>
+                <div id="piedra4"></div>
+               </div>
+            <div id="thirdth-church">
+                <div id="piedra5"></div>
+                <div id="piedra6"></div>
+                <div id="piedra7"></div>
+                </div>
+            <div id="roof-church"> </div>
+            <div id="cross-one"></div>
+            <div id="cross-two"></div>
+            <div id="secondroof-church"> </div>
+            <div id="fourth-church"> </div>
+            <div id="fitth-church"></div>
+            <div id="sixth-church"></div>
+            <div id="seventh-church"></div>
+                    
+                 </div>
+                       
+        </section>
+        </div>
+        <footer> <h4>&copy; 2020 Daniel Jaimes  Venezuela </h4></footer>
+        </div>
+    </main>
+    
+    
+    
+    </body>
+     
+</html>
